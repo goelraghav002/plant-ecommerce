@@ -1,4 +1,13 @@
-<?php require './includes/head.php' ?>
+
+<?php 
+    session_start();
+    require "./includes/head.php" ;
+
+    if(!isset($_SESSION['email'])){
+        echo "<script> location.href='/ecommerce'; </script>";
+        exit();
+    }
+?>
 
 
     <section class="breadcrumb breadcrumb_bg">

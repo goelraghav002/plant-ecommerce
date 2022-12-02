@@ -1,5 +1,8 @@
 
-    <?php require "./includes/head.php" ?>
+<?php 
+    session_start();
+    require "./includes/head.php" 
+?>
 
     <section class="breadcrumb breadcrumb_bg">
         <div class="container">
