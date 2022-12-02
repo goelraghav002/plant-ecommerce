@@ -1,5 +1,15 @@
-<?php require_once "includes/header.php" ?>
-<?php require "includes/conn.php" ?>
+<?php require "includes/header.php";
+
+require 'includes/conn.php';
+
+session_start();
+
+if(!isset($_SESSION['admin_email'])){
+    echo "<script> location.href='/ecommerce/admin/login.php'; </script>";
+    exit();
+}
+
+?>
 
 <!-- <?php
     $query = 'SELECT users_products.id, users_products.status, users_products.user_id, users_products.item_id, product.title, users.first_name, users.last_name, product.sale_price FROM users_products, product, users WHERE users_products.user_id = users.id AND users_products.item_id = product.id and users_products.status="confirmed"';

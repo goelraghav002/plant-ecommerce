@@ -51,19 +51,19 @@
                         </div>
                         <div class="hearer_icon d-flex">
                             <?php
-                            $mail = '';
-                            if (isset($_SESSION['email'])){
-                                $mail = $_SESSION["email"];
-                            }
-                            $name= '';
-
-                            $query = 'SELECT * FROM users';
-                            $result = mysqli_query($con, $query);
-                            while($row = mysqli_fetch_array($result)){
-                                if($row['email'] == $mail){
-                                    $name = $row['first_name'] . " " . $row['last_name'];
+                                $mail = '';
+                                if (isset($_SESSION['email'])){
+                                    $mail = $_SESSION["email"];
                                 }
-                            }
+                                $name= '';
+
+                                $query = 'SELECT * FROM users';
+                                $result = mysqli_query($con, $query);
+                                while($row = mysqli_fetch_array($result)){
+                                    if($row['email'] == $mail){
+                                        $name = $row['first_name'] . " " . $row['last_name'];
+                                    }
+                                }
 
                             if (isset($_SESSION['email'])) {
 

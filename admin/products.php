@@ -1,6 +1,15 @@
-<?php require_once "includes/header.php" ?>
+<?php require "includes/header.php";
 
+require 'includes/conn.php';
 
+session_start();
+
+if(!isset($_SESSION['admin_email'])){
+    echo "<script> location.href='/ecommerce/admin/login.php'; </script>";
+    exit();
+}
+
+?>
 <div class="mainContainer">
     <?php require "includes/sidebar.php" ?>
 
