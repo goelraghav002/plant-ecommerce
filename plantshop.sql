@@ -39,9 +39,6 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `name`, `mobile`, `email`, `password`) VALUES
-(4, 'Raghav Goel', 9876543211, 'raghav1@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
-
 -- --------------------------------------------------------
 
 --
@@ -70,9 +67,6 @@ CREATE TABLE `categories` (
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`id`, `title`) VALUES
-(1, 'Indoor');
-
 -- --------------------------------------------------------
 
 --
@@ -92,13 +86,6 @@ CREATE TABLE `orders` (
 --
 -- Dumping data for table `orders`
 --
-
-INSERT INTO `orders` (`id`, `product_id`, `user_id`, `product_qty`, `order_amount`, `order_date`, `status`) VALUES
-(26, 23, 9, 1, 548, '2022-12-03 11:02:18', 'Shipped'),
-(27, 23, 9, 1, 548, '2022-12-03 12:33:26', 'Confirmed'),
-(28, 24, 8, 1, 1048, '2022-12-03 12:46:25', 'Delivered'),
-(29, 25, 8, 1, 1548, '2022-12-03 12:46:25', 'Shipped'),
-(30, 26, 8, 1, 504, '2022-12-03 14:02:20', 'Confirmed');
 
 -- --------------------------------------------------------
 
@@ -120,12 +107,6 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category`, `title`, `price`, `qty`, `desc`, `image`) VALUES
-(23, 1, 'Money Plant', 499, 25, 'Hello World', 'banner2.png'),
-(24, 1, 'Plant', 999, 22, 'Hello', 'offer_img.png'),
-(25, 1, 'Cactus', 1499, 10, 'Dessert Plant', 'banner_img.png'),
-(26, 1, 'Jasminum Sambac Butt Mogra', 455, 43, 'Jasminum Sambac Butt Mogra', 'banner.png');
-
 -- --------------------------------------------------------
 
 --
@@ -144,10 +125,6 @@ CREATE TABLE `users` (
 --
 -- Dumping data for table `users`
 --
-
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `mobile`, `email`, `password`) VALUES
-(8, 'Raghav ', 'Goel', 9876543210, 'raghav1@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
-(9, 'Sample', 'Test', 9876543211, 'sample@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
 
 --
 -- Indexes for dumped tables
