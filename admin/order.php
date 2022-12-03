@@ -1,24 +1,17 @@
-<?php require "includes/header.php";
+<?php
 
 require 'includes/conn.php';
 
 session_start();
 
-if(!isset($_SESSION['admin_email'])){
+if (!isset($_SESSION['admin_email'])) {
     echo "<script> location.href='/ecommerce/admin/login.php'; </script>";
     exit();
 }
+require "includes/header.php";
 
 ?>
-
-<!-- <?php
-    $query = 'SELECT users_products.id, users_products.status, users_products.user_id, users_products.item_id, product.title, users.first_name, users.last_name, product.sale_price FROM users_products, product, users WHERE users_products.user_id = users.id AND users_products.item_id = product.id and users_products.status="confirmed"';
-
-    $result = mysqli_query($conn, $query);
-?> -->
-
-
-<!-- <div class="mainContainer">
+<div class="mainContainer">
     <?php require "includes/sidebar.php" ?>
 
 
@@ -30,35 +23,44 @@ if(!isset($_SESSION['admin_email'])){
         </div>
 
         <div class="container">
-        <table class="table container">
-        <thead>
-            <tr>
-                <th scope="col">Order Id</th>
-                <th scope="col">Customer Id</th>
-                <th scope="col">Order name</th>
-                <th scope="col">Customer Name</th>
-                <th scope="col">Order Amount</th>
-                <th scope="col">Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            while($row = mysqli_fetch_array($result)){
-                echo '<tr>
-                <th scope="row">'.$row['id'].'</th>
-                <td>'.$row['user_id'].'</td>
-                <td>'.$row['title'].'</td>
-                <td>'.$row['first_name'] .' '. $row['last_name'] .'</td>
-                <td>Rs. '.$row['sale_price'].'</td>
-                <td>'.$row['status'].'</td>
-                </tr>';
-            }
-            ?>
-        </tbody>
-    </table>
+            <table class="table container">
+                <thead>
+                    <tr>
+                        <th scope="col">Product Id</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Specifications</th>
+                        <th scope="col">MRP</th>
+                        <th scope="col">Sale Price</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Storage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php require "includes/conn.php" ?>
+                    <?php
+                    $query = 'SELECT * FROM `product`';
+
+                    $result = mysqli_query($conn, $query);
+
+                    while ($row = mysqli_fetch_array($result)) {
+                        echo "<tr><th>" . $row['id'] . "</th>";
+                        echo "<th>" . $row['title'] . "</th>";
+                        echo "<td><img class='adminimg' src='../images/" . $row['image'] . "' /></td>";
+                        echo "<td>" . $row['specification'] . "</td>";
+                        echo "<td>" . $row['mrp'] . "</td>";
+                        echo "<td>" . $row['sale_price'] . "</td>";
+                        echo "<td>" . $row['color'] . "</td>";
+                        echo "<td>" . $row['storage'] . "</td></tr>";
+                    }
+
+                    ?>
+                </tbody>
+            </table>
         </div>
     </div>
-</div> -->
+</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

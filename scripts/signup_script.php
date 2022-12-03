@@ -34,7 +34,7 @@ if ($num != 0) {
     echo "New record has id: " . mysqli_insert_id($con);
     $user_id = mysqli_insert_id($con);
     $_SESSION['email'] = $email;
-    $_SESSION['user_id'] = $id;
+    $_SESSION['user_id'] = $user_id;
     header('location: ../index.php');
 }
 ?>

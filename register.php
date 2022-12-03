@@ -15,7 +15,7 @@
                     <div class="breadcrumb_iner">
                         <div class="breadcrumb_iner_item">
                             <h2>Register</h2>
-                            <p>Home <span>-</span> Tracking Order</p>
+                            <p>Home <span>-</span> User Registration</p>
                         </div>
                     </div>
                 </div>

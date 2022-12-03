@@ -38,6 +38,38 @@ if(!isset($_SESSION['admin_email'])){
         </div>
 
         
+        <div class="container">
+            <table class="table container">
+                <thead class="py-4">
+                    <tr>
+                        <th scope="col">Admin Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Contact Number</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php require "includes/conn.php" ?>
+                    <?php
+                    $query = 'SELECT * FROM `admin`';
+
+                    $result = mysqli_query($conn, $query);
+
+                    while ($row = mysqli_fetch_array($result)) {
+                        echo "<tr><th>" . $row['id'] . "</th>";
+                        echo "<th>" . $row['name'] . "</th>";
+                        echo "<td>" . $row['mobile'] . "</td>";
+                        echo "<td>" . $row['email']  . "</td>";
+                        echo "<td>
+                                <a href='scripts/delete_script.php?id={$row['id']}'><button type='button' class='btn btn-danger'>Delete</button></a>
+                            </td></tr>";
+                    }
+
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 

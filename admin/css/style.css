@@ -16,6 +16,7 @@ body {
 
 .adminimg {
     width: 50px;
+    height: 30px;
 }
 
 .sidebar {
@@ -23,9 +24,9 @@ body {
     margin: 0;
     padding: 0;
     width: 200px;
-    top: 56px;
+    top: 70px;
     background-color: #f1f1f1;
-    height: calc(100vh - 56px);
+    height: calc(100vh - 70px);
     position: sticky !important;
     overflow: auto;
 }
@@ -33,6 +34,7 @@ body {
 nav {
     top: 0;
     position: sticky !important;
+    z-index: 10;
 }
 
 .sidebar a {

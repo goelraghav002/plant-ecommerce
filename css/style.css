@@ -166,6 +166,15 @@ a:hover {
     text-decoration: none;
 }
 
+.btn-outline-danger {
+    color: #dc3545;
+    background-color: transparent;
+    background-image: none;
+    border-color: #dc3545;
+    font-weight: 800;
+    border: 2px solid #dc3545;
+}
+
 
 /* line 94, ../../01 cl html template/03_jun 2019/188_Aranoz shop_html/sass/_common.scss */
 
@@ -2992,7 +3001,7 @@ ul {
 @media (max-width: 991px) {
     /* line 58, ../../01 cl html template/03_jun 2019/188_Aranoz shop_html/sass/_product_list.scss */
     .single_product_item img {
-        width: 100%;
+        /* width: 100%; */
     }
 }
 

@@ -4,16 +4,15 @@
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $title = $_POST['title'];
-        $specs = $_POST['specs'];
-        $mrp = $_POST['mrp'];
+        $category = $_POST['category'];
         $price = $_POST['price'];
-        $color = $_POST['color'];
-        $storage = $_POST['storage'];
+        $qty = $_POST['qty'];
+        $desc = $_POST['desc'];
         $image = $_POST['image'];
     }
 
-    $query = "INSERT INTO `product`(`title`, `specification`, `mrp`, `sale_price`, `color`, `storage`, `image`) 
-    VALUES ('".$title."','" . $specs ."','".$mrp."','".$price."','".$color."','".$storage."','".$image."')";
+    $query = "INSERT INTO `products`(`category`, `title`, `price`, `qty`, `desc`, `image`)
+    VALUES ('$category','$title','$price','$qty','$desc','$image')";
     
     
 

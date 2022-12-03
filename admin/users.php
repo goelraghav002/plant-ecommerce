@@ -1,5 +1,4 @@
-<?php require "includes/conn.php" ?>
-<?php require "includes/header.php";
+<?php 
 
 require 'includes/conn.php';
 
@@ -9,6 +8,7 @@ if(!isset($_SESSION['admin_email'])){
     echo "<script> location.href='/ecommerce/admin/login.php'; </script>";
     exit();
 }
+require "includes/header.php";
 
 ?>
 
@@ -32,6 +32,7 @@ if(!isset($_SESSION['admin_email'])){
                         <th scope="col">Name</th>
                         <th scope="col">Contact Number</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Action</th>
                         <!-- <th scope="col">Specifications</th>
                         <th scope="col">MRP</th>
                         <th scope="col">Sale Price</th>
@@ -48,13 +49,12 @@ if(!isset($_SESSION['admin_email'])){
 
                     while ($row = mysqli_fetch_array($result)) {
                         echo "<tr><th>" . $row['id'] . "</th>";
-                        echo "<th>" . $row['first_name'] . "</th>";
+                        echo "<th>" . $row['first_name'] . " " . $row['last_name'] ."</th>";
                         echo "<td>" . $row['mobile'] . "</td>";
                         echo "<td>" . $row['email'] . "</td>";
-                        // echo "<td><img class='adminimg' src='../images/".$row['image']."' /></td>";
-                        // echo "<td>" . $row['sale_price'] . "</td>";
-                        // echo "<td>" . $row['color'] . "</td>";
-                        // echo "<td>" . $row['storage'] . "</td></tr>";
+                        echo "<td>
+                            <a href='scripts/delete_script_user.php?id={$row['id']}'><button type='button' class='btn btn-danger'>Delete</button></a>
+                        </td></tr>";
                     }
 
                     ?>

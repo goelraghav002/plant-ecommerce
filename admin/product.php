@@ -1,5 +1,16 @@
-<?php require "includes/conn.php" ?>
-<?php require_once "includes/header.php" ?>
+<?php
+
+require 'includes/conn.php';
+
+session_start();
+
+if (!isset($_SESSION['admin_email'])) {
+    echo "<script> location.href='/ecommerce/admin/login.php'; </script>";
+    exit();
+}
+require "includes/header.php";
+
+?>
 
 
 <div class="mainContainer">
@@ -19,29 +30,28 @@
                     <label for="title" class="form-label">Title</label>
                     <input type="text" name="title" class="form-control" id="title">
                 </div>
-                <div class="col-md-6">
-                    <label for="specs" class="form-label">Specification</label>
-                    <input type="text" name="specs" class="form-control" id="specs">
+                <div class="form-group col-md-6">
+                    <label for="category">State</label>
+                    <select id="category" name="category" class="form-control my-2">
+                        <option selected>Select a category</option>
+                        <option value="Indoor">Indoor</option>
+                    </select>
                 </div>
                 <div class="col-md-6">
-                    <label for="mrp" class="form-label">M.R.P</label>
-                    <input type="number" name="mrp" class="form-control" id="mrp">
-                </div>
-                <div class="col-md-6">
-                    <label for="price" class="form-label">Sale Price</label>
+                    <label for="price" class="form-label">Price</label>
                     <input type="number" name="price" class="form-control" id="price">
                 </div>
                 <div class="col-md-6">
-                    <label for="color" class="form-label">Color</label>
-                    <input type="text" name="color" class="form-control" id="color">
+                    <label for="qty" class="form-label">Quantity</label>
+                    <input type="number" name="qty" class="form-control" id="qty">
                 </div>
                 <div class="col-md-6">
-                    <label for="storage" class="form-label">Storage</label>
-                    <input type="text" name="storage" class="form-control" id="storage">
-                </div>
-                <div class="col-md-6">
-                    <label for="image" class="form-label">Storage</label>
+                    <label for="image" class="form-label">Image</label>
                     <input type="file" name="image" class="form-control" id="image">
+                </div>
+                <div class="col-md-6">
+                    <label for="desc" class="form-label">Description</label>
+                    <input type="text" name="desc" class="form-control" id="desc">
                 </div>
 
                 <div class="col-12">

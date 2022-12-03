@@ -1,13 +1,14 @@
-<?php require "includes/header.php";
+<?php
 
 require 'includes/conn.php';
 
 session_start();
 
-if(!isset($_SESSION['admin_email'])){
+if (!isset($_SESSION['admin_email'])) {
     echo "<script> location.href='/ecommerce/admin/login.php'; </script>";
     exit();
 }
+require "includes/header.php";
 
 ?>
 <div class="mainContainer">
@@ -26,31 +27,29 @@ if(!isset($_SESSION['admin_email'])){
                 <thead>
                     <tr>
                         <th scope="col">Product Id</th>
-                        <th scope="col">Title</th>
                         <th scope="col">Image</th>
-                        <th scope="col">Specifications</th>
-                        <th scope="col">MRP</th>
-                        <th scope="col">Sale Price</th>
-                        <th scope="col">Color</th>
-                        <th scope="col">Storage</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php require "includes/conn.php" ?>
                     <?php
-                    $query = 'SELECT * FROM `product`';
+                    $query = 'SELECT * FROM `products`';
 
                     $result = mysqli_query($conn, $query);
 
                     while ($row = mysqli_fetch_array($result)) {
                         echo "<tr><th>" . $row['id'] . "</th>";
+                        echo "<td><img class='adminimg' src='../img/{$row['image']}' /></td>";
                         echo "<th>" . $row['title'] . "</th>";
-                        echo "<td><img class='adminimg' src='../images/".$row['image']."' /></td>";
-                        echo "<td>" . $row['specification'] . "</td>";
-                        echo "<td>" . $row['mrp'] . "</td>";
-                        echo "<td>" . $row['sale_price'] . "</td>";
-                        echo "<td>" . $row['color'] . "</td>";
-                        echo "<td>" . $row['storage'] . "</td></tr>";
+                        echo "<td>" . $row['price'] . "</td>";
+                        echo "<td>" . $row['category'] . "</td>";
+                        echo "<td>
+                                <a href='scripts/delete_script_product.php?id={$row['id']}'><button type='button' class='btn btn-danger'>Delete</button></a>
+                            </td></tr>";
                     }
 
                     ?>

@@ -12,17 +12,16 @@ if (!isset($_SESSION['email'])) {
 <?php
 
 $user_id = $_SESSION['user_id'];
-$query = 'SELECT products.price, products.id, products.title, products.image, cart.qty from cart, products where products.id = cart.product_id and cart.user_id="' . $user_id . '"';
+// $query = 'SELECT products.price, products.id, products.title, products.image, cart.qty from cart, products where products.id = cart.product_id and cart.user_id="' . $user_id . '"';
 
-$result = mysqli_query($con, $query);
+// $result = mysqli_query($con, $query);
 
-while ($row = mysqli_fetch_array($result)) {
-  $order = "INSERT INTO `orders`(`product_id`, `user_id`, `product_qty`, `order_amount`, `status`) 
-    VALUES (" . $row['id'] . "," . $user_id . "," . $row['qty'] . "," . $row['price'] * $row['qty'] + 49 . ", 'Confirmed')";
-  $deletefromcart = "DELETE FROM CART WHERE cart.user_id='$user_id'";
-  $answer = mysqli_query($con, $order);
-  $deleted = mysqli_query($con, $deletefromcart);
-}
+// while ($row = mysqli_fetch_array($result)) {
+//   $order = "INSERT INTO `orders`(`product_id`, `user_id`, `product_qty`, `order_amount`, `status`) 
+//     VALUES (" . $row['id'] . "," . $user_id . "," . $row['qty'] . "," . $row['price'] * $row['qty'] + 49 . ", 'Confirmed')";
+
+//   $answer = mysqli_query($con, $order);
+// }
 
 ?>
 
@@ -34,8 +33,8 @@ while ($row = mysqli_fetch_array($result)) {
       <div class="col-lg-8">
         <div class="breadcrumb_iner">
           <div class="breadcrumb_iner_item">
-            <h2>Order Confirmation</h2>
-            <p>Home <span>-</span> Order Confirmation</p>
+            <h2>My Orders</h2>
+            <p>Home <span>-</span> All Orders</p>
           </div>
         </div>
       </div>
@@ -46,13 +45,8 @@ while ($row = mysqli_fetch_array($result)) {
 
 <section class="confirmation_part padding_top">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="confirmation_tittle">
-          <h1><span>Thank you. Your order has been received.</span></h1>
-        </div>
-      </div>
-      <!-- <div class="col-lg-6 col-lx-4">
+    <!-- <div class="row">
+      <div class="col-lg-6 col-lx-4">
         <div class="single_confirmation_details">
           <h4>order info</h4>
           <ul>
@@ -108,9 +102,9 @@ while ($row = mysqli_fetch_array($result)) {
             </li>
           </ul>
         </div>
-      </div> -->
-    </div>
-    <!-- <div class="row">
+      </div>
+    </div> -->
+    <div class="row">
       <div class="col-lg-12">
         <div class="order_details_iner">
           <h3>My Order</h3>
@@ -130,9 +124,9 @@ while ($row = mysqli_fetch_array($result)) {
               $orderresult = mysqli_query($con, $allOrders);
               while($row = mysqli_fetch_array($orderresult)){
                 echo '<tr>
-                        <th colspan="2"><span>'.$row['product_id'].'</span></th>
+                        <th colspan="2"><span>'.$row['title'].'</span></th>
                         <th>'.$row['product_qty'].'</th>
-                        <th> <span>'.$row['order_amount'].'</span></th>
+                        <th> <span>Rs. '.$row['order_amount'].'</span></th>
                         <th> <span>'.$row['status'].'</span></th>
                       </tr>';
               }
@@ -141,7 +135,7 @@ while ($row = mysqli_fetch_array($result)) {
           </table>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </section>
 

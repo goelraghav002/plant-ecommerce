@@ -18,7 +18,7 @@ if($num==0){
 }else{
     $row = mysqli_fetch_array($result);
     $_SESSION['admin_email'] = $row['email'];
-    $_SESSION['admin_user_id'] = $row['id'];
+    $_SESSION['admin_id'] = $row['id'];
 
     header('location: ../index.php');
 }
