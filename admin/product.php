@@ -41,6 +41,7 @@ require "includes/header.php";
                         <option value="Trailing Indoor Plants">Trailing Indoor Plants</option>
                         <option value="Small Indoor Plants">Small Indoor Plants</option>
                         <option value="Large Indoor Plants">Large Indoor Plants</option>
+                        <option value="Moisture Loving Indoor Plants">Moisture Loving Indoor Plants</option>
                         <option value="Succulents & Cacti">Succulents & Cacti</option>
                         <option value="Air Plants">Air Plants</option>
                     </select>
