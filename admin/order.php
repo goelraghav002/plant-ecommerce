@@ -18,7 +18,7 @@ require "includes/header.php";
     <div class="allContainer">
         <div class="container jumbotron jumbotron-fluid col-md-6 bg-light my-4 p-4 text-center">
             <div class="container">
-                <h1 class="display-4">All Products</h1>
+                <h1 class="display-4">Customer Orders</h1>
             </div>
         </div>
 
