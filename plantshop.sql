@@ -95,7 +95,7 @@ CREATE TABLE `orders` (
 
 CREATE TABLE `products` (
   `id` int(100) NOT NULL,
-  `category` int(11) NOT NULL,
+  `category` varchar(50) NOT NULL,
   `title` varchar(255) NOT NULL,
   `price` int(100) NOT NULL,
   `qty` int(11) NOT NULL,
@@ -201,16 +201,7 @@ ALTER TABLE `products`
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
   
-INSERT INTO categories (id, title)
-VALUES (1001, "Flowering Indoor Plants"),
-(1002 ,"Colourful Foliage Indoor Plants"),
-(1003, "Low-Light Indoor Plants"),
-(1004, "Air Purifying Indoor Plants"),
-(1005, "Trailing Indoor Plants"),
-(1006, "Small Indoor Plants"),
-(1007, "Large Indoor Plants"),
-(1008, "Succulents & Cacti"),
-(1009, "Air Plants");
+
 
 COMMIT;
 
