@@ -40,7 +40,7 @@ require "includes/header.php";
                 <tbody>
                     <?php require "includes/conn.php" ?>
                     <?php
-                    $query = 'SELECT orders.id, orders.product_id, orders.status, orders.user_id, orders.order_amount, products.title, products.image, users.first_name, users.last_name FROM `orders`, `products`, `users` where orders.product_id=products.id and orders.user_id=users.id';
+                    $query = 'SELECT orders.id, orders.product_id, orders.status, orders.user_id, orders.order_amount, products.title, products.image, users.first_name, users.last_name FROM `orders`, `products`, `users` where orders.product_id=products.id and orders.user_id=users.id order by id';
 
                     $result = mysqli_query($conn, $query);
 
