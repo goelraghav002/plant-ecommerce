@@ -112,19 +112,23 @@ $user_id = $_SESSION['user_id'];
           <table class="table table-borderless">
             <thead>
               <tr>
-                <th scope="col" colspan="2">Product</th>
+                <th scope="col">Order Id</th>
+                <th scope="col">Order Date</th>
+                <th scope="col">Product</th>
                 <th scope="col">Quantity</th>
-                <th scope="col">Total</th>
+                <th scope="col">Order Total</th>
                 <th scope="col">Status</th>
               </tr>
             </thead>
             <tbody>
               <?php
-              $allOrders = "SELECT * from orders, products where user_id='$user_id' and orders.product_id=products.id";
+              $allOrders = "SELECT orders.id, orders.order_date ,products.title, orders.product_qty, orders.order_amount, orders.status from orders, products where user_id='$user_id' and orders.product_id=products.id";
               $orderresult = mysqli_query($con, $allOrders);
               while($row = mysqli_fetch_array($orderresult)){
                 echo '<tr>
-                        <th colspan="2"><span>'.$row['title'].'</span></th>
+                        <th><span>'.$row['id'].'</span></th>
+                        <th><span>'.$row['order_date'].'</span></th>
+                        <th><span>'.$row['title'].'</span></th>
                         <th>'.$row['product_qty'].'</th>
                         <th> <span>Rs. '.$row['order_amount'].'</span></th>
                         <th> <span>'.$row['status'].'</span></th>

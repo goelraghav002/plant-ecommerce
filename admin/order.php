@@ -27,6 +27,7 @@ require "includes/header.php";
                 <thead>
                     <tr>
                         <th scope="col">Order Id</th>
+                        <th scope="col">Order Date</th>
                         <th scope="col">Product Name</th>
                         <th scope="col">Image</th>
                         <th scope="col">Product Id</th>
@@ -40,13 +41,14 @@ require "includes/header.php";
                 <tbody>
                     <?php require "includes/conn.php" ?>
                     <?php
-                    $query = 'SELECT orders.id, orders.product_id, orders.status, orders.user_id, orders.order_amount, products.title, products.image, users.first_name, users.last_name FROM `orders`, `products`, `users` where orders.product_id=products.id and orders.user_id=users.id order by id';
+                    $query = 'SELECT orders.id, orders.order_date, orders.product_id, orders.status, orders.user_id, orders.order_amount, products.title, products.image, users.first_name, users.last_name FROM `orders`, `products`, `users` where orders.product_id=products.id and orders.user_id=users.id order by id';
 
                     $result = mysqli_query($conn, $query);
 
                     while ($row = mysqli_fetch_array($result)) {
                         echo "<tr>";
                         echo "<th>" . $row['id'] . "</th>";
+                        echo "<th>" . $row['order_date'] . "</th>";
                         echo "<th>" . $row['title'] . "</th>";
                         echo "<td><img class='adminimg' src='../img/" . $row['image'] . "' /></td>";
                         echo "<td>" . $row['product_id'] ."</td>";
