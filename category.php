@@ -52,45 +52,44 @@ while ($row = mysqli_fetch_array($result)) {
                         <div class="widgets_inner">
                             <ul class="list">
                                 <li>
-                                    <a href="#">Frozen Fish</a>
-                                    <span>(250)</span>
+                                    <a href="#">Flowering Indoor Plants</a>
+                                    <span>(3)</span>
                                 </li>
                                 <li>
-                                    <a href="#">Dried Fish</a>
-                                    <span>(250)</span>
+                                    <a href="#">Colourful Foliage Indoor Plants</a>
+                                    <span>(2)</span>
                                 </li>
                                 <li>
-                                    <a href="#">Fresh Fish</a>
-                                    <span>(250)</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </aside>
-                    <aside class="left_widgets p_filter_widgets">
-                        <div class="l_w_title">
-                            <h3>Product filters</h3>
-                        </div>
-                        <div class="widgets_inner">
-                            <ul class="list">
-                                <li>
-                                    <a href="#">Apple</a>
+                                    <a href="#">Low-Light Indoor Plants</a>
+                                    <span>(2)</span>
                                 </li>
                                 <li>
-                                    <a href="#">Asus</a>
-                                </li>
-                                <li class="active">
-                                    <a href="#">Gionee</a>
-                                </li>
-                            </ul>
-                            <ul class="list">
-                                <li>
-                                    <a href="#">Apple</a>
+                                    <a href="#">Air Purifying Indoor Plants</a>
+                                    <span>(3)</span>
                                 </li>
                                 <li>
-                                    <a href="#">Asus</a>
+                                    <a href="#">Trailing Indoor Plants</a>
+                                    <span>(2)</span>
                                 </li>
-                                <li class="active">
-                                    <a href="#">Gionee</a>
+                                <li>
+                                    <a href="#">Small Indoor Plants</a>
+                                    <span>(6)</span>
+                                </li>
+                                <li>
+                                    <a href="#">Large Indoor Plants</a>
+                                    <span>(6)</span>
+                                </li>
+                                <li>
+                                    <a href="#">Succulents & Cacti</a>
+                                    <span>(3)</span>
+                                </li>
+                                <li>
+                                    <a href="#">Moisture Loving Indoor Plants</a>
+                                    <span>(2)</span>
+                                </li>
+                                <li>
+                                    <a href="#">Air Plants</a>
+                                    <span>(3)</span>
                                 </li>
                             </ul>
                         </div>
@@ -161,7 +160,7 @@ while ($row = mysqli_fetch_array($result)) {
                     while ($row = mysqli_fetch_array($result)) {
                         echo '<div class="col-lg-4 col-sm-6">
                                 <div class="single_product_item">
-                                    <img width="200px" src="img/'.$row['image'].'" alt="djwij" />
+                                    <img width="200px" src="img/product/'.$row['image'].'" alt="djwij" />
                                     <div class="single_product_text">
                                         <h4>'. $row['title'] .'</h4>
                                         <h3>Rs. '. $row['price'] .'</h3>';

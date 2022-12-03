@@ -34,7 +34,16 @@ require "includes/header.php";
                     <label for="category">State</label>
                     <select id="category" name="category" class="form-control my-2">
                         <option selected>Select a category</option>
-                        <option value="Indoor">Indoor</option>
+                        <option value="Flowering Indoor Plants">Flowering Indoor Plants</option>
+                        <option value="Colourful Foliage Indoor Plants">Colourful Foliage Indoor Plants</option>
+                        <option value="Low-Light Indoor Plants">Low-Light Indoor Plants</option>
+                        <option value="Air Purifying Indoor Plants">Air Purifying Indoor Plants</option>
+                        <option value="Trailing Indoor Plants">Trailing Indoor Plants</option>
+                        <option value="Small Indoor Plants">Small Indoor Plants</option>
+                        <option value="Large Indoor Plants">Large Indoor Plants</option>
+                        <option value="Moisture Loving Indoor Plants">Moisture Loving Indoor Plants</option>
+                        <option value="Succulents & Cacti">Succulents & Cacti</option>
+                        <option value="Air Plants">Air Plants</option>
                     </select>
                 </div>
                 <div class="col-md-6">

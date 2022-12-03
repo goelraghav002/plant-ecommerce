@@ -57,7 +57,7 @@ $result = mysqli_query($con, $query);
                                     <td>
                                         <div class="media">
                                             <div class="d-flex">
-                                                <img width="100px" src="img/'.$row['image'].'" alt="" />
+                                                <img width="100px" src="img/product/'.$row['image'].'" alt="" />
                                             </div>
                                             <div class="media-body">
                                                 <p>'.$row['title'].'</p>

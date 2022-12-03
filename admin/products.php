@@ -44,7 +44,7 @@ require "includes/header.php";
 
                     while ($row = mysqli_fetch_array($result)) {
                         echo "<tr><th>" . $row['id'] . "</th>";
-                        echo "<td><img class='adminimg' src='../img/{$row['image']}' /></td>";
+                        echo "<td><img class='adminimg' src='../img/product/{$row['image']}' /></td>";
                         echo "<th>" . $row['title'] . "</th>";
                         echo "<td>" . $row['price'] . "</td>";
                         echo "<td>" . $row['qty'] . "</td>";
