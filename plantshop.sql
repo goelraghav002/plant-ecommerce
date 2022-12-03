@@ -182,11 +182,6 @@ ALTER TABLE `admin`
 ALTER TABLE `cart`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
---
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -205,6 +200,18 @@ ALTER TABLE `products`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  
+INSERT INTO categories (id, title)
+VALUES (1001, "Flowering Indoor Plants"),
+(1002 ,"Colourful Foliage Indoor Plants"),
+(1003, "Low-Light Indoor Plants"),
+(1004, "Air Purifying Indoor Plants"),
+(1005, "Trailing Indoor Plants"),
+(1006, "Small Indoor Plants"),
+(1007, "Large Indoor Plants"),
+(1008, "Succulents & Cacti"),
+(1009, "Air Plants");
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
