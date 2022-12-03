@@ -2513,7 +2513,7 @@ ul {
 .banner_part {
     position: relative;
     background: rgb(203, 255, 203);
-    background: radial-gradient(circle, rgba(203, 255, 203, 1) 0%, rgba(121, 226, 119, 1) 100%);
+    background: radial-gradient(circle, rgb(202, 251, 202) 0%, rgb(161 232 160) 100%);
     overflow: hidden;
 }
 
