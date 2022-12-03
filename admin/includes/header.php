@@ -14,13 +14,11 @@
 
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/ecommerce/admin">Admin Panel</a>
+            <a class="navbar-brand" href="/ecommerce/admin"><h1>Admin Panel</h1></a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/ecommerce/admin">Home</a>
-                    </li>
+                    
                 </ul>
 
 
