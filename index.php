@@ -19,8 +19,8 @@ session_start();
 									<div class="banner_text_iner">
 										<h1>Buy green to save green</h1>
 										<p>
-											Incididunt ut labore et dolore magna aliqua quis ipsum
-											suspendisse ultrices gravida. Risus commodo viverra
+											Buy the best indoor plants.
+											We have a plant for each door.
 										</p>
 										<a href="category.php" class="btn_2">buy now</a>
 									</div>
@@ -38,8 +38,7 @@ session_start();
 									<div class="banner_text_iner">
 										<h1>Indoor Plants</h1>
 										<p>
-											Incididunt ut labore et dolore magna aliqua quis ipsum
-											suspendisse ultrices gravida. Risus commodo viverra
+											Choose among wide variety of indoor plants.
 										</p>
 										<a href="#" class="btn_2">buy now</a>
 									</div>
@@ -55,10 +54,9 @@ session_start();
 							<div class="col-lg-5 col-md-8">
 								<div class="banner_text">
 									<div class="banner_text_iner">
-										<h1>Wood & Cloth Sofa</h1>
+										<h1>Budget Friendly</h1>
 										<p>
-											Incididunt ut labore et dolore magna aliqua quis ipsum
-											suspendisse ultrices gravida. Risus commodo viverra
+											Eco-Friendly, Pocket-Friendly.
 										</p>
 										<a href="#" class="btn_2">buy now</a>
 									</div>
