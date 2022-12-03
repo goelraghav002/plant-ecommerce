@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2022 at 06:53 AM
+-- Generation Time: Dec 03, 2022 at 09:34 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -66,6 +66,13 @@ CREATE TABLE `categories` (
   `title` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `title`) VALUES
+(1, 'Indoor');
+
 -- --------------------------------------------------------
 
 --
@@ -87,7 +94,11 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `product_id`, `user_id`, `product_qty`, `order_amount`, `order_date`, `status`) VALUES
-(26, 23, 9, 1, 548, '2022-12-03 11:02:18', 'Confirmed');
+(26, 23, 9, 1, 548, '2022-12-03 11:02:18', 'Shipped'),
+(27, 23, 9, 1, 548, '2022-12-03 12:33:26', 'Confirmed'),
+(28, 24, 8, 1, 1048, '2022-12-03 12:46:25', 'Delivered'),
+(29, 25, 8, 1, 1548, '2022-12-03 12:46:25', 'Shipped'),
+(30, 26, 8, 1, 504, '2022-12-03 14:02:20', 'Confirmed');
 
 -- --------------------------------------------------------
 
@@ -110,9 +121,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category`, `title`, `price`, `qty`, `desc`, `image`) VALUES
-(23, 0, 'Money Plant', 499, 25, 'Hello World', 'banner2.png'),
-(24, 0, 'Plant', 999, 22, 'Hello', 'offer_img.png'),
-(25, 0, 'Cactus', 1499, 10, 'Dessert Plant', 'banner_img.png');
+(23, 1, 'Money Plant', 499, 25, 'Hello World', 'banner2.png'),
+(24, 1, 'Plant', 999, 22, 'Hello', 'offer_img.png'),
+(25, 1, 'Cactus', 1499, 10, 'Dessert Plant', 'banner_img.png'),
+(26, 1, 'Jasminum Sambac Butt Mogra', 455, 43, 'Jasminum Sambac Butt Mogra', 'banner.png');
 
 -- --------------------------------------------------------
 
@@ -154,6 +166,12 @@ ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -185,19 +203,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `users`
