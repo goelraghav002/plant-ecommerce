@@ -32,7 +32,7 @@ while ($row = mysqli_fetch_array($result)) {
                 <div class="breadcrumb_iner">
                     <div class="breadcrumb_iner_item">
                         <h2>All Products</h2>
-                        <p>Home <span>-</span> Shop Category</p>
+                        <p>Home <span>-</span> Buy Products</p>
                     </div>
                 </div>
             </div>
@@ -63,22 +63,6 @@ while ($row = mysqli_fetch_array($result)) {
                                     <a href="#">Fresh Fish</a>
                                     <span>(250)</span>
                                 </li>
-                                <li>
-                                    <a href="#">Meat Alternatives</a>
-                                    <span>(250)</span>
-                                </li>
-                                <li>
-                                    <a href="#">Fresh Fish</a>
-                                    <span>(250)</span>
-                                </li>
-                                <li>
-                                    <a href="#">Meat Alternatives</a>
-                                    <span>(250)</span>
-                                </li>
-                                <li>
-                                    <a href="#">Meat</a>
-                                    <span>(250)</span>
-                                </li>
                             </ul>
                         </div>
                     </aside>
@@ -97,12 +81,6 @@ while ($row = mysqli_fetch_array($result)) {
                                 <li class="active">
                                     <a href="#">Gionee</a>
                                 </li>
-                                <li>
-                                    <a href="#">Micromax</a>
-                                </li>
-                                <li>
-                                    <a href="#">Samsung</a>
-                                </li>
                             </ul>
                             <ul class="list">
                                 <li>
@@ -113,36 +91,6 @@ while ($row = mysqli_fetch_array($result)) {
                                 </li>
                                 <li class="active">
                                     <a href="#">Gionee</a>
-                                </li>
-                                <li>
-                                    <a href="#">Micromax</a>
-                                </li>
-                                <li>
-                                    <a href="#">Samsung</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </aside>
-                    <aside class="left_widgets p_filter_widgets">
-                        <div class="l_w_title">
-                            <h3>Color Filter</h3>
-                        </div>
-                        <div class="widgets_inner">
-                            <ul class="list">
-                                <li>
-                                    <a href="#">Black</a>
-                                </li>
-                                <li>
-                                    <a href="#">Black Leather</a>
-                                </li>
-                                <li class="active">
-                                    <a href="#">Black with red</a>
-                                </li>
-                                <li>
-                                    <a href="#">Gold</a>
-                                </li>
-                                <li>
-                                    <a href="#">Spacegrey</a>
                                 </li>
                             </ul>
                         </div>
@@ -177,7 +125,7 @@ while ($row = mysqli_fetch_array($result)) {
                                 <p><span><?php echo $sum ?> </span> Product Found</p>
                             </div>
                             <div class="single_product_menu d-flex">
-                                <h5>short by :</h5>
+                                <h5>sort by :</h5>
                                 <select>
                                     <option data-display="Select">name</option>
                                     <option value="1">price</option>
