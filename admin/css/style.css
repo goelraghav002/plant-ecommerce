@@ -24,9 +24,9 @@ body {
     margin: 0;
     padding: 0;
     width: 200px;
-    top: 70px;
+    top: 82px;
     background-color: #f1f1f1;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 82px);
     position: sticky !important;
     overflow: auto;
 }

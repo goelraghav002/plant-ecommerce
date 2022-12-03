@@ -8162,10 +8162,10 @@ h6 {
 
 .breadcrumb_bg {
     background-image: url("../img/breadcrumb.png");
-    /* background-color: #90ee90; */
-    /* background-position: center;
+    background-color: #90ee90;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
 }
 
 
