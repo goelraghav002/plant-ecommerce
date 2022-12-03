@@ -40,7 +40,7 @@ session_start();
 										<p>
 											Choose among wide variety of indoor plants.
 										</p>
-										<a href="#" class="btn_2">buy now</a>
+										<a href="#" class="btn_2">Buy now</a>
 									</div>
 								</div>
 							</div>
@@ -58,7 +58,7 @@ session_start();
 										<p>
 											Eco-Friendly, Pocket-Friendly.
 										</p>
-										<a href="#" class="btn_2">buy now</a>
+										<a href="#" class="btn_2">Buy now</a>
 									</div>
 								</div>
 							</div>
@@ -80,7 +80,7 @@ session_start();
 		<div class="row justify-content-center">
 			<div class="col-lg-12">
 				<div class="section_tittle text-center">
-					<h2>awesome <span>shop</span></h2>
+					<h2>Awesome <span>Shop</span></h2>
 				</div>
 			</div>
 		</div>
