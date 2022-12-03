@@ -30,6 +30,7 @@ require "includes/header.php";
                         <th scope="col">Image</th>
                         <th scope="col">Title</th>
                         <th scope="col">Price</th>
+                        <th scope="col">Quantity Left</th>
                         <th scope="col">Category</th>
                         <th scope="col">Action</th>
                     </tr>
@@ -46,6 +47,7 @@ require "includes/header.php";
                         echo "<td><img class='adminimg' src='../img/{$row['image']}' /></td>";
                         echo "<th>" . $row['title'] . "</th>";
                         echo "<td>" . $row['price'] . "</td>";
+                        echo "<td>" . $row['qty'] . "</td>";
                         echo "<td>" . $row['category'] . "</td>";
                         echo "<td>
                                 <a href='scripts/delete_script_product.php?id={$row['id']}'><button type='button' class='btn btn-danger'>Delete</button></a>

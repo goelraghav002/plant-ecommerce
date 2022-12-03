@@ -26,32 +26,39 @@ require "includes/header.php";
             <table class="table container">
                 <thead>
                     <tr>
-                        <th scope="col">Product Id</th>
-                        <th scope="col">Title</th>
+                        <th scope="col">Order Id</th>
+                        <th scope="col">Product Name</th>
                         <th scope="col">Image</th>
-                        <th scope="col">Specifications</th>
-                        <th scope="col">MRP</th>
-                        <th scope="col">Sale Price</th>
-                        <th scope="col">Color</th>
-                        <th scope="col">Storage</th>
+                        <th scope="col">Product Id</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Customer Id</th>
+                        <th scope="col">Order Amount</th>
+                        <th scope="col">Order Status</th>
+                        <th scope="col" colspan="2">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php require "includes/conn.php" ?>
                     <?php
-                    $query = 'SELECT * FROM `product`';
+                    $query = 'SELECT orders.id, orders.product_id, orders.status, orders.user_id, orders.order_amount, products.title, products.image, users.first_name, users.last_name FROM `orders`, `products`, `users` where orders.product_id=products.id and orders.user_id=users.id';
 
                     $result = mysqli_query($conn, $query);
 
                     while ($row = mysqli_fetch_array($result)) {
-                        echo "<tr><th>" . $row['id'] . "</th>";
+                        echo "<tr>";
+                        echo "<th>" . $row['id'] . "</th>";
                         echo "<th>" . $row['title'] . "</th>";
-                        echo "<td><img class='adminimg' src='../images/" . $row['image'] . "' /></td>";
-                        echo "<td>" . $row['specification'] . "</td>";
-                        echo "<td>" . $row['mrp'] . "</td>";
-                        echo "<td>" . $row['sale_price'] . "</td>";
-                        echo "<td>" . $row['color'] . "</td>";
-                        echo "<td>" . $row['storage'] . "</td></tr>";
+                        echo "<td><img class='adminimg' src='../img/" . $row['image'] . "' /></td>";
+                        echo "<td>" . $row['product_id'] ."</td>";
+                        echo "<td>" . $row['first_name'] ." " .$row['last_name']. "</td>";
+                        echo "<td>" . $row['user_id'] . "</td>";
+                        echo "<td>Rs. " . $row['order_amount'] . "</td>";
+                        echo "<td>" . $row['status'] . "</td>";
+                        echo "<td colspan='2'>
+                                <a href='scripts/order_shipped.php?id=".$row['id']."'><button class='btn btn-success'>Shipped</button></a>
+                                <a href='scripts/order_delivered.php?id=".$row['id']."'><button class='btn btn-success'>Delivered</button></a>
+                            </td>";
+                        echo "</tr>";
                     }
 
                     ?>
