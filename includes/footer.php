@@ -75,7 +75,7 @@
                                 document.write(new Date().getFullYear());
                             </script>
                             All rights reserved | This website is made by
-                            <a href="https://colorlib.com" target="_blank">Me</a>
+                            <a href="" target="_blank">Me</a>
                         </p>
                     </div>
                 </div>

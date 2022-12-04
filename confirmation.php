@@ -20,6 +20,8 @@ while ($row = mysqli_fetch_array($result)) {
   $order = "INSERT INTO `orders`(`product_id`, `user_id`, `product_qty`, `order_amount`, `status`) 
     VALUES (" . $row['id'] . "," . $user_id . "," . $row['qty'] . "," . $row['price'] * $row['qty'] + 49 . ", 'Confirmed')";
   $deletefromcart = "DELETE FROM CART WHERE cart.user_id='$user_id'";
+  $decreaseqty = "UPDATE PRODUCTS SET qty = qty - 1 where id=".$row['id']."";
+  $ans = mysqli_query($con, $decreaseqty);
   $answer = mysqli_query($con, $order);
   $deleted = mysqli_query($con, $deletefromcart);
 }
