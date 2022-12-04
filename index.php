@@ -45,7 +45,7 @@ session_start();
 								</div>
 							</div>
 							<div class="banner_img d-none d-lg-block">
-								<img src="img/banner2.png" alt="" />
+								<img src="img/banner.png" alt="" />
 							</div>
 						</div>
 					</div>
