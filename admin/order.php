@@ -50,7 +50,7 @@ require "includes/header.php";
                         echo "<th>" . $row['id'] . "</th>";
                         echo "<th>" . $row['order_date'] . "</th>";
                         echo "<th>" . $row['title'] . "</th>";
-                        echo "<td><img class='adminimg' src='../img/" . $row['image'] . "' /></td>";
+                        echo "<td><img class='adminimg' src='../img/product/" . $row['image'] . "' /></td>";
                         echo "<td>" . $row['product_id'] ."</td>";
                         echo "<td>" . $row['first_name'] ." " .$row['last_name']. "</td>";
                         echo "<td>" . $row['user_id'] . "</td>";
