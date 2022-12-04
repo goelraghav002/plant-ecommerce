@@ -38,6 +38,7 @@ if (!isset($_SESSION['email'])) {
 
 <section class="checkout_area padding_top">
   <div class="container">
+    
     <br><br>
     <div class="billing_details">
       <div class="row">
