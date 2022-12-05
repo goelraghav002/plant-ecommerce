@@ -76,7 +76,6 @@
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown_3">
                                                 <a class="dropdown-item" href="allorders.php">My Orders</a>
                                                 <a class="dropdown-item" href="tracking.php">tracking</a>
-                                                <a class="dropdown-item" href="confirmation.php">confirmation</a>
                                                 <a class="dropdown-item" href="scripts/logout_script.php">Logout</a>
                                             </div>
                                         </div>
